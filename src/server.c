@@ -6,7 +6,7 @@
 /*   By: anblanco <anblanco@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 14:16:17 by anblanco          #+#    #+#             */
-/*   Updated: 2024/08/13 21:51:43 by anblanco         ###   ########.fr       */
+/*   Updated: 2024/08/13 22:03:49 by anblanco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ void	handler_bit(int bit)
 		g_bitargument.c = 0;
 		g_bitargument.recive = 0;
 	}
+	
 }
 
 int	main(void)

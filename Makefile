@@ -6,7 +6,7 @@
 #    By: anblanco <anblanco@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/06 14:18:56 by anblanco          #+#    #+#              #
-#    Updated: 2024/08/13 21:53:05 by anblanco         ###   ########.fr        #
+#    Updated: 2024/08/13 21:55:12 by anblanco         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,8 +51,8 @@ clean:
 		@echo
 		@echo "                          ---Deleting objects :) ---                          "
 		@$(CLEAN) $(DIR_OBJ)
-		$(clean) server
-		$(clean) client
+		$(CLEAN) server
+		$(CLEAN) client
 		@echo
 		@echo --------------------------------------------------------------------------------
 	make clean --directory=$(DIR_LIBFT)
