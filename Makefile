@@ -6,14 +6,12 @@
 #    By: anblanco <anblanco@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/06 14:18:56 by anblanco          #+#    #+#              #
-#    Updated: 2024/08/12 14:37:32 by anblanco         ###   ########.fr        #
+#    Updated: 2024/08/12 20:08:59 by anblanco         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-#NAME = 
-
 DIR_SRC = ./src/
-DIR_OBJ = ./obj/
+#DIR_OBJ = ./obj/
 DIR_LIBFT = ./libft/
 LIBFT_BIN = $(DIR_LIBFT)libft.a
 
@@ -26,14 +24,12 @@ CC = gcc
 
 CLEAN = rm -Rf
 
-OBJS := $(SRC:%.c=$(DIR_OBJ)%.o)
+all:	server client $(LIBFT_BIN)
 
-all: 		$(NAME)
-
-server: src/server.c
+server: $(DIR_SRC)server.c
 		$(CC) $(CFLAGS) src/server.c -o server -I./libft/ -I./include
 
-client: src/client.c
+client: $(DIR_SRC)client.c
 		$(CC) $(CFLAGS) src/client.c -o client -I./libft/ -I./include
 
 $(LIBFT_BIN):
