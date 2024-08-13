@@ -6,14 +6,14 @@
 /*   By: anblanco <anblanco@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 14:16:12 by anblanco          #+#    #+#             */
-/*   Updated: 2024/08/13 22:09:11 by anblanco         ###   ########.fr       */
+/*   Updated: 2024/08/13 22:15:55 by anblanco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <signal.h>
 
-void	send_signal(int pid, char *msg, size_t len)
+void	send_signal(int pid, unsigned char *msg, size_t len)
 {
 	int	i;
 	int	bit;
@@ -39,13 +39,13 @@ void	send_signal(int pid, char *msg, size_t len)
 int	main(int argc, char **argv)
 {
 	int		pid;
-	char	*msg;
+	unsigned char	*msg;
 
 	if (argc == 3)
 	{
 		pid = ft_atoi(argv[1]);
-		msg = argv[2];
-		send_signal(pid, msg, (ft_strlen(msg) + 1));
+		msg = (unsigned char *)argv[2];
+		send_signal(pid, msg, (ft_strlen((const char *)msg) + 1));
 	}
 	else
 		ft_printf("Sintax: %s [PID_servidor] [Mensage]", argv[0]);
