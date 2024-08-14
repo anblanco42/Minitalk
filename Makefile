@@ -6,7 +6,7 @@
 #    By: anblanco <anblanco@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/06 14:18:56 by anblanco          #+#    #+#              #
-#    Updated: 2024/08/13 21:55:12 by anblanco         ###   ########.fr        #
+#    Updated: 2024/08/14 14:55:30 by anblanco         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,15 +34,6 @@ server: $(DIR_SRC)server.c
 client: $(DIR_SRC)client.c
 		$(CC) $(CFLAGS) src/client.c -o client -I$(DIR_LIBFT) -L$(DIR_LIBFT) -lft
 
-# $(OBJS): $(DIR_OBJ)%.o: $(DIR_SRC)%.c
-# 			@echo ----------------------------------------------------------------------
-# 			@echo
-# 			@echo "                     ---Compiling objects :) ---                     "
-# 			mkdir -p $(@D)
-# 			$(CC) $(CFLAGS) -c $^ -o $@ -I./libft/ -I./
-# 			@echo
-# 			@echo ----------------------------------------------------------------------
-
 $(NAME): $(OBJS) $(LIBFT_BIN)
 			$(CC) $(CFLAGS) $(OBJS) $(LIBFT_BIN) -o $(NAME)
 
@@ -50,7 +41,6 @@ clean:
 		@echo --------------------------------------------------------------------------------
 		@echo
 		@echo "                          ---Deleting objects :) ---                          "
-		@$(CLEAN) $(DIR_OBJ)
 		$(CLEAN) server
 		$(CLEAN) client
 		@echo

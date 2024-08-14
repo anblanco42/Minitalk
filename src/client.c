@@ -6,19 +6,18 @@
 /*   By: anblanco <anblanco@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 14:16:12 by anblanco          #+#    #+#             */
-/*   Updated: 2024/08/13 22:15:55 by anblanco         ###   ########.fr       */
+/*   Updated: 2024/08/14 18:31:56 by anblanco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <signal.h>
+#include "../include/minitalk.h"
 
 void	send_signal(int pid, unsigned char *msg, size_t len)
 {
 	int	i;
 	int	bit;
 
-	i = 0;	
+	i = 0;
 	while (len > 0)
 	{
 		bit = 0;
@@ -38,7 +37,7 @@ void	send_signal(int pid, unsigned char *msg, size_t len)
 
 int	main(int argc, char **argv)
 {
-	int		pid;
+	int				pid;
 	unsigned char	*msg;
 
 	if (argc == 3)

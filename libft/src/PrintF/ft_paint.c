@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_paint.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: andres <andres@student.42.fr>              +#+  +:+       +#+        */
+/*   By: anblanco <anblanco@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 23:40:40 by anblanco          #+#    #+#             */
-/*   Updated: 2024/07/31 23:47:15 by andres           ###   ########.fr       */
+/*   Updated: 2024/08/14 16:16:07 by anblanco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,6 @@ int	ft_paint_absolut(unsigned int n)
 
 	i = 0;
 	x = n;
-
 	if (x > 9)
 	{
 		i += ft_paint_nbr(x / 10);

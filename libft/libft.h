@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anblanco <anblanco@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anblanco <anblanco@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 15:34:55 by anblanco          #+#    #+#             */
-/*   Updated: 2024/07/14 17:25:45 by anblanco         ###   ########.fr       */
+/*   Updated: 2024/08/14 18:34:54 by anblanco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,6 @@ void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
-int	ft_printf(char const *s, ...);
+int		ft_printf(char const *s, ...);
 
 #endif
