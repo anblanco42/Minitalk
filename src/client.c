@@ -6,7 +6,7 @@
 /*   By: anblanco <anblanco@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 14:16:12 by anblanco          #+#    #+#             */
-/*   Updated: 2024/08/14 18:31:56 by anblanco         ###   ########.fr       */
+/*   Updated: 2024/08/20 17:06:44 by anblanco         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	send_signal(int pid, unsigned char *msg, size_t len)
 			else
 				kill(pid, SIGUSR2);
 			bit++;
-			usleep(500);
+			usleep(42);
 		}
 		i++;
 		len--;
